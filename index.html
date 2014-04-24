@@ -169,7 +169,7 @@ requests in context of used method. It counts the next methods:</p>
 <li><code>DELETE</code></li>
 <li><code>COPY</code></li>
 </ul>
-<p><img alt="Request methods" src="file:///home/kxepal/projects/munin-plugin-couchdb/images/request-methods.png" /></p>
+<p><img alt="Request methods" src="http://kxepal.github.io/munin-plugin-couchdb/images/request-methods.png" /></p>
 <h4 id="request-times">Request Times</h4>
 <p>The <code>couchdb_request_times</code> graph shows stddev/mean of HTTP request time within
 each <a href="http://docs.couchdb.org/en/latest/config/misc.html#stats/samples">sampling range</a>.</p>
@@ -177,7 +177,7 @@ each <a href="http://docs.couchdb.org/en/latest/config/misc.html#stats/samples">
 (<code>[60, 300, 900]</code>) will be used. Note, that in this case for each sample that
 doesn't match value defined in <a href="http://docs.couchdb.org/en/latest/config/misc.html#stats/samples">stats/samples</a> option this graph will
 print zeros.</p>
-<p><img alt="Request times" src="file:///home/kxepal/projects/munin-plugin-couchdb/images/request-times.png" /></p>
+<p><img alt="Request times" src="http://kxepal.github.io/munin-plugin-couchdb/images/request-times.png" /></p>
 <h4 id="requests-by-type">Requests by Type</h4>
 <p>The <code>couchdb_httpd_requests</code> graph shows rate of HTTP requests in context of
 their type:</p>
@@ -187,7 +187,7 @@ their type:</p>
 <li><code>view reads</code>: amount of requests to the <a href="http://docs.couchdb.org/en/latest/api/ddoc/views.html">view indexes</a></li>
 <li><code>temporary view reads</code>: amount of requests to the <a href="http://docs.couchdb.org/en/latest/api/database/temp-views.html#post--db-_temp_view">temporary view indexes</a></li>
 </ul>
-<p><img alt="Requests by type" src="file:///home/kxepal/projects/munin-plugin-couchdb/images/http-requests.png" /></p>
+<p><img alt="Requests by type" src="http://kxepal.github.io/munin-plugin-couchdb/images/http-requests.png" /></p>
 <h4 id="continuous-changes-feeds-listeners">Continuous Changes Feeds Listeners</h4>
 <p>While <code>clients_requesting_changes</code> metric is in the same group as
 <code>bulk_requests</code>, <code>temporary_view_reads</code> and others,
@@ -195,7 +195,7 @@ the <code>couchdb_clients_requesting_changes</code> graph shows not requests rat
 the current amount of active clients to continuous changes feeds.</p>
 <p>This graph also helps to roughly estimate amount of continuous replications
 that are running against monitored instance.</p>
-<p><img alt="Continuous changes feeds listeners" src="file:///home/kxepal/projects/munin-plugin-couchdb/images/continuous-changes-feeds-listeners.png" /></p>
+<p><img alt="Continuous changes feeds listeners" src="http://kxepal.github.io/munin-plugin-couchdb/images/continuous-changes-feeds-listeners.png" /></p>
 <h4 id="response-status-codes">Response Status Codes</h4>
 <p>The <code>couchdb_httpd_status_codes</code> graph provides information about HTTP
 responses in context of <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">status code</a>.</p>
@@ -204,7 +204,7 @@ quality service for you users. Normally, you want to see no <code>500</code> err
 Having high amount of <code>401</code> errors could say about authentication problems
 while <code>403</code> tell you that something or someone actively doing things that he's
 shouldn't do.</p>
-<p><img alt="Response status codes" src="file:///home/kxepal/projects/munin-plugin-couchdb/images/http-status-codes.png" /></p>
+<p><img alt="Response status codes" src="http://kxepal.github.io/munin-plugin-couchdb/images/http-status-codes.png" /></p>
 <h3 id="server-metrics">Server Metrics</h3>
 <p>These metrics are related to whole server instance.</p>
 <h4 id="authentication-cache">Authentication Cache</h4>
@@ -240,10 +240,10 @@ and "anomaly low".</p>
 to compare misses counter with. Just for instance, is 10 cache misses a high
 value? What about 100 or 1000? Having cache hits rate at some point helps
 to answer on this question.</p>
-<p><img alt="Authentication cache ratio" src="file:///home/kxepal/projects/munin-plugin-couchdb/images/auth-cache.png" title="Whoa! Someone really tries to do bad things there" /></p>
+<p><img alt="Authentication cache ratio" src="http://kxepal.github.io/munin-plugin-couchdb/images/auth-cache.png" title="Whoa! Someone really tries to do bad things there" /></p>
 <h4 id="databases-io">Databases I/O</h4>
 <p>The <code>couchdb_database_io</code> graph shows overall databases read/write rate.</p>
-<p><img alt="Databases I/O" src="file:///home/kxepal/projects/munin-plugin-couchdb/images/database-io.png" /></p>
+<p><img alt="Databases I/O" src="http://kxepal.github.io/munin-plugin-couchdb/images/database-io.png" /></p>
 <h4 id="open-databases">Open Databases</h4>
 <p>The <code>couchdb_open_databases</code> graph shows amount of currently opened databases.</p>
 <p>CouchDB only keeps opened databases which are receives some activity: been
@@ -258,13 +258,13 @@ you setup correct <code>max_dbs_open</code> value that'll fit your needs.</p>
 <p><em>Notice:</em> If server administrator's credentials provided (need to request
 <a href="http://docs.couchdb.org/en/latest/api/server/configuration.html#get--_config">/_config</a> resource) the <code>max_dbs_open</code> configuration value will be used to
 set proper <code>warning</code> and <code>critical</code> levels.</p>
-<p><img alt="Open databases" src="file:///home/kxepal/projects/munin-plugin-couchdb/images/open-databases.png" /></p>
+<p><img alt="Open databases" src="http://kxepal.github.io/munin-plugin-couchdb/images/open-databases.png" /></p>
 <h4 id="open-files">Open Files</h4>
 <p>The <code>couchdb_open_files</code> graph shows amount of currently opened file
 descriptors.</p>
 <p><em>Notice:</em> Handling system <code>nofile</code> limit isn't implemented yet and couldn't be
 possible for remote instances.</p>
-<p><img alt="Open files" src="file:///home/kxepal/projects/munin-plugin-couchdb/images/open-files.png" /></p>
+<p><img alt="Open files" src="http://kxepal.github.io/munin-plugin-couchdb/images/open-files.png" /></p>
 <h4 id="active-tasks">Active Tasks</h4>
 <p><strong>Warning:</strong> this graph is <em>disabled</em> by default. To enable it you should
 set <code>env.monitor_active_tasks yes</code> in plugin configuration file and also
@@ -281,7 +281,7 @@ heavy (compactions are so). For instance, you're looking on <code>diskstats_iops
 graph and see high write activity, but for most cases you could say for sure
 who generates it. Combining these graphs together for the same period may
 give you the answer is this activity is related to CouchDB and how if it is.</p>
-<p><img alt="Active tasks" src="file:///home/kxepal/projects/munin-plugin-couchdb/images/active-tasks.png" /></p>
+<p><img alt="Active tasks" src="http://kxepal.github.io/munin-plugin-couchdb/images/active-tasks.png" /></p>
 <h4 id="users">Users</h4>
 <p><strong>Warning:</strong> these graphs are <em>disabled</em> by default. To enable them you should
 set <code>env.monitor_users yes</code> in plugin configuration file and also
@@ -295,7 +295,7 @@ may be a sign for worry about server security.</p>
 <p>The <code>couchdb_users</code> graph shows users from <a href="http://docs.couchdb.org/en/latest/intro/security.html#authentication-database">authentication database</a> and
 tracks <code>registered</code> and <code>deleted</code> amount of them. This helps to estimate size of
 your users database growing and decreasing in time.</p>
-<p><img alt="CouchDB users" src="file:///home/kxepal/projects/munin-plugin-couchdb/images/users.png" /></p>
+<p><img alt="CouchDB users" src="http://kxepal.github.io/munin-plugin-couchdb/images/users.png" /></p>
 <h3 id="database-metrics">Database Metrics</h3>
 <p><a href="https://github.com/gws/munin-plugin-couchdb">munin-plugin-couchdb</a> also allows to monitor few databases metrics that could
 be useful. To enable it you need to set <code>env.monitor_databases yes</code> variable
@@ -320,7 +320,7 @@ accidental  "resurrection" of such documents during push replication.</p>
 existed ones, this may seriously affect on consumed disk space. Such "graveyard
 databases" are needed in cleanup from deleted documents (in case when it's ever
 possible) and this graph helps to detect them.</p>
-<p><img alt="Database documents" src="file:///home/kxepal/projects/munin-plugin-couchdb/images/database-docs.png" /></p>
+<p><img alt="Database documents" src="http://kxepal.github.io/munin-plugin-couchdb/images/database-docs.png" /></p>
 <h4 id="database-fragmentation">Database Fragmentation</h4>
 <p>The <code>couchdb_db_${dbname}_frags</code> graph tracks database <code>disk_size</code> grow in time
 and overhead caused over <code>data_size</code>.</p>
@@ -329,6 +329,6 @@ by old documents revisions, but it's hard to note when compaction is worth to
 run especially since it's heavy disk I/O operation: you probably wouldn't
 compact 1TiB database just to free 20GiB. This graph helps to find answers on
 these two questions: "when?" and "how much?".</p>
-<p><img alt="Database disk usage" src="file:///home/kxepal/projects/munin-plugin-couchdb/images/database-frag.png" /></p>
+<p><img alt="Database disk usage" src="http://kxepal.github.io/munin-plugin-couchdb/images/database-frag.png" /></p>
 <h2 id="license">License</h2>
 <p><a href="https://tldrlegal.com/license/beerware-license">Beerware</a></p></body></html>
